@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # ECE 2524 Homework 3 Problem 1 (Nayana Teja Chiluvuri)
 
 import sys
