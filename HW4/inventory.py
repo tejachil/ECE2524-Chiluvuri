@@ -6,16 +6,50 @@ import argparse
 import fileinput
 import shlex
 
+def rewriteFile():
+	with open(args.data_file, "w") as f:
+		for entry in entries:
+			f.write('\n'.join(entry))
+			f.write('\n\n')
+	return
+
 def inventory_add(arg):
-	print "adding"
+	newEntry = ['']*len(entries[0])
+	for index, each in enumerate(arg):
+		newTerms = arg[index].split('=')
+		newEntry[entries[0].index(newTerms[0])] = newTerms[1]
+	entries.append(newEntry)
+	print "SUCCESSFULLY ADDED NEW ENTRY:"
+	print '\t'.join(newEntry)
+	rewriteFile()
+	return
+
 def inventory_remove(arg):
-	print arg
+	removeTerms = arg[0].split('=')
+	for index, entry in enumerate(entries):
+		if entry[entries[0].index(removeTerms[0])] == removeTerms[1]:
+			print "DELETED ENTRY:"
+			print '\t'.join(entry)
+			del entries[index]
+			inventory_remove(arg)
+	rewriteFile()
+	return
+
 def inventory_set(arg):
 	if arg[1] != 'for':
 		return
 	else:
 		setTerms = arg[0].split('=')
 		termToSet = arg[2].split('=')
+		for entry in entries:
+			if entry[entries[0].index(termToSet[0])] == termToSet[1]:
+				print '\t'.join(entries[0])
+				print '\t'.join(entry)
+				print "CHANGED TO"
+				entry[entries[0].index(setTerms[0])] = setTerms[1]
+				print '\t'.join(entry)
+	rewriteFile()
+	return
 	
 def inventory_list(arg):
 	sort = False
@@ -40,8 +74,7 @@ def inventory_list(arg):
 			output.pop(0)
 			output.sort(key=lambda k: k[index])
 		for entry in output:
-			print '\t'.join(entry)
-
+			print '\t'.join(entry).ljust(50)
 
 def inventory_exit(arg):
 	sys.exit(0)
@@ -51,7 +84,8 @@ parser = argparse.ArgumentParser(description='Manipulate and display inventory f
 parser.add_argument('-f', '--data-file', action='store', dest='data_file', help='enter the name of the data file')
 args = parser.parse_args()
 
-dataFile = open(args.data_file)
+
+dataFile = open(args.data_file, 'r')
 
 entry = []
 entries = []
@@ -61,7 +95,7 @@ for dataLine in dataFile:
 		entry = []
 		continue
 	entry.append(dataLine.strip())
-
+dataFile.close()
 
 while True:
 	try:
