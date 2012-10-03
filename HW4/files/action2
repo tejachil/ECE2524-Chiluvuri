@@ -1,0 +1,3 @@
+add PartID=O42587 Description='OP AMP, 9V' Footprint='SMD-4' Quantity=10
+list all
+exit

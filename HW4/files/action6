@@ -1,0 +1,5 @@
+remove Footprint=2917
+list all
+remove Quantity=1
+list all
+exit

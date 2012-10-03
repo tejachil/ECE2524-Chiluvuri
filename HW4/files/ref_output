@@ -1,0 +1,174 @@
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all
+
+PartID   Description                   Footprint   Quantity   
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+C86933   CAP,CHIP,TANT,1mF,2.5V,20%    2917        5          
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     2          
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: exit
+
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: add PartID=O42587 Description='OP AMP, 9V' Footprint='SMD-4' Quantity=10
+
+['O42587', 'OP AMP, 9V', 'SMD-4', '']
+SUCCESSFULLY ADDED NEW ENTRY:
+O42587   OP AMP, 9V                    SMD-4       10         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all
+
+PartID   Description                   Footprint   Quantity   
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+C86933   CAP,CHIP,TANT,1mF,2.5V,20%    2917        5          
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     2          
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+O42587   OP AMP, 9V                    SMD-4       10         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: exit
+
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all with Quantity=1
+
+PartID   Description                   Footprint   Quantity   
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all with Quantity=1 sort by PartID
+
+PartID   Description                   Footprint   Quantity   
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: exit
+
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all sort by Quantity
+
+PartID   Description                   Footprint   Quantity   
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     2          
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+C86933   CAP,CHIP,TANT,1mF,2.5V,20%    2917        5          
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+O42587   OP AMP, 9V                    SMD-4       10         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all sort by PartID
+
+PartID   Description                   Footprint   Quantity   
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+C86933   CAP,CHIP,TANT,1mF,2.5V,20%    2917        5          
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+O42587   OP AMP, 9V                    SMD-4       10         
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     2          
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: exit
+
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: set Quantity=20 for PartID=T48979
+
+PartID   Description                   Footprint   Quantity   
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     2          
+CHANGED TO
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     20         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all
+
+PartID   Description                   Footprint   Quantity   
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+C86933   CAP,CHIP,TANT,1mF,2.5V,20%    2917        5          
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     20         
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+O42587   OP AMP, 9V                    SMD-4       10         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: exit
+
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: remove Footprint=2917
+
+DELETED ENTRY:
+C86933   CAP,CHIP,TANT,1mF,2.5V,20%    2917        5          
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all
+
+PartID   Description                   Footprint   Quantity   
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     20         
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+O42587   OP AMP, 9V                    SMD-4       10         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: remove Quantity=1
+
+DELETED ENTRY:
+T49046   CONVERTER DC/DC 5V OUT 1W     8-SMD       1          
+DELETED ENTRY:
+D30421   DIODE ZENER DUAL 6.8V         SOT-523     1          
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: list all
+
+PartID   Description                   Footprint   Quantity   
+C86932   CAP,CHIP,TANT,4.7uF,16V,20%   1206        10         
+C87118   CAP,CHIP,TANT,100uF,6V,20%    3010        8          
+R67811   RES,10OHM,1/8W,5%,SMD         0805        15         
+R67817   RES,10OHM,1/4W,1%,SMD         1206        10         
+T48979   IC QUAD 2-IN NAND GATE        14-SOIC     20         
+ATM354   ATMEL MICROCONTROLLER         DIP-14      4          
+PIC354   PIC MCU 18-BIT                TSOP-12     9          
+O42587   OP AMP, 9V                    SMD-4       10         
+
+PLEASE ENTER A COMMAND: 
+	COMMAND ENTERED: exit
+
