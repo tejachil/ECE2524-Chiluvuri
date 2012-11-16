@@ -3,7 +3,7 @@
 CC			= g++
 CFLAGS		= -Wall -g -o
 
-all: consumer generator
+all: consumer generator dispatcher
 
 consumer: consumer.cpp
 	${CC} ${CFLAGS} consumer consumer.cpp
@@ -15,4 +15,4 @@ dispatcher: dispatcher.cpp
 	${CC} ${CFLAGS} dispatcher dispatcher.cpp
 	
 clean:
-	rm consumer generator
+	rm consumer generator dispatcher
