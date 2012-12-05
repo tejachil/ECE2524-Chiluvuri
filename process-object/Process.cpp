@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////
-// ECE 2524, Homework 1, Nayana Teja Chiluvuri
+// ECE 2524, process-object, Nayana Teja Chiluvuri
 //
 // File name: Process.cpp
 // Description: implementation of the Process object
