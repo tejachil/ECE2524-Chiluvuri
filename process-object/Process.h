@@ -1,11 +1,11 @@
 #include <unistd.h>
 #include <sys/wait.h>
-
-#include <string>
+#include <algorithm>
+#include <string.h>
 #include <vector>
+#include <iostream>
 
-class Process
-{
+class Process{
 public:
     /* Initialize the process, create input/output pipes */
     Process(const std::vector<std::string> &args);
@@ -23,9 +23,7 @@ public:
     
     pid_t pid() const { return m_pid; };
 
-private:
-    void exec();
-    
+private:    
     std::string m_name;
     int readpipe[2];    
     int writepipe[2];
