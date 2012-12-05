@@ -1,5 +1,5 @@
 CXX := g++
-CPPFLAGS := -Wall -g -std=c++11
+CPPFLAGS := -Wall -g -std=c++0x
 
 all: process-test consumer
 
@@ -10,4 +10,4 @@ consumer: consumer.o
 	$(CXX) $(CPPFLAGS) -o $@ $^
 
 clean:
-	-rm -f *.o
+	-rm -f *.o consumer process-test
